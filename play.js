@@ -5,6 +5,8 @@ const {connect} = require('./client');
 const setupInput = require('./input');
 
 console.log("Connecting ...");
+
+//excute setupInput and pass object conn to input.js
 setupInput(connect());
 
 

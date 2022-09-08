@@ -14,13 +14,14 @@ const connect = function() {
   // interpret incoming data as text
   conn.setEncoding("utf8");
   
+  //initial connect to server
   conn.on("connect",() => {
     console.log("Successfully connected to game server!");
     conn.write("Name: Xev");
   });
-  
+  //listen and output data from server
   conn.on('data',(data) => {
-    console.log(data);//receive the data from server
+    console.log(data);
   });
   
   return conn;
