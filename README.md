@@ -10,7 +10,7 @@ Before you can run this client, you will need to be running the server side whic
 
 It is a client-sever architecture, multi connect server through TCP, and play the game on server screen. 
 
-![Screen shot of the game]('./screenshot.jpg')
+![Screen shot of the game](https://github.com/XiaoweiShen/snake-client/blob/main/screenshot.jpg)
 
 
 
