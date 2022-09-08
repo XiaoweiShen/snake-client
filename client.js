@@ -1,12 +1,14 @@
 /*eslint linebreak-style: ["error", "windows"]*/
 
 const net = require("net");
+const { host,port } = require("./constants");
+
 // establishes a connection with the game server
 
 const connect = function() {
   const conn = net.createConnection({
-    host: "10.0.2.15", // IP address here,
-    port: 50541 // PORT number here,
+    host: host, // IP address from constant.js
+    port: port // PORT number from constant.js
   });
   
   // interpret incoming data as text
@@ -18,7 +20,7 @@ const connect = function() {
   });
   
   conn.on('data',(data) => {
-    console.log(data);
+    console.log(data);//receive the data from server
   });
   
   return conn;

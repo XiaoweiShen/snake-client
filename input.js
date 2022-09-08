@@ -15,7 +15,7 @@ const setupInput = function(conn) {
 };
 const handleUserInput = function(key) {
   
-  if (key === '\u0003')
+  if (key === '\u0003')//ctrl c handler
     process.exit();
   if (key === 'a' || key === '\033[D' || key === 'A')
     connection.write("Move: left");
@@ -25,6 +25,13 @@ const handleUserInput = function(key) {
     connection.write("Move: right");
   if (key === 's' || key === '\033[B' || key === 'S')
     connection.write("Move: down");
+  //define several special key g,l,e for send short message to server.
+  if (key === 'g' || key === 'G')
+    connection.write(`Say: Gogogo!`);
+  if (key === 'l' || key === 'L')
+    connection.write(`Say: Lol!`);
+  if (key === 'e' || key === 'E')
+    connection.write(`Say: Eat one!`);
 };
 
 module.exports = setupInput;
